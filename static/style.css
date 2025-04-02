@@ -1,12 +1,17 @@
+/* Custom styles for Alba Vilardell site */
+
+/* Basic body styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
 }
 
-h1, h2, h3 {
-  color: #333;
+/* Header styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #343a40;
+  font-weight: 600;
 }
 
 .container {
@@ -17,37 +22,90 @@ h1, h2, h3 {
 
 .section {
   padding: 60px 0;
+  margin-bottom: 30px;
 }
 
 .section-title {
   text-align: center;
   margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
 }
 
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+/* Card styling */
 .card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+/* List styling */
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 12px 20px;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Button styling */
 .btn {
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Footer styling */
+footer {
+  padding: 40px 0 20px;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .section {
     padding: 40px 0;
+  }
+  
+  .card-body {
+    padding: 20px;
   }
 } 
