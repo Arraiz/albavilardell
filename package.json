@@ -9,6 +9,7 @@
     "clean": "rm -rf public resources"
   },
   "dependencies": {
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.1.3",
+    "fontawesome-free": "^1.0.4"
   }
 } 
