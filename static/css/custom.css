@@ -1,0 +1,72 @@
+/* Custom styles for Alba Vilardell site */
+
+/* Basic body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* Hero section */
+#hero .content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#hero .content h2 {
+  font-size: 2.5rem;
+}
+
+/* About section */
+#about .content {
+  font-size: 1.1rem;
+}
+
+#about .skills-section .skill-item {
+  background-color: #f8f9fa;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Experience section */
+#experience .card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+#experience .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact section */
+#contact {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 30px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero .content h1 {
+    font-size: 2.5rem;
+  }
+  
+  #hero .content h2 {
+    font-size: 2rem;
+  }
+} 

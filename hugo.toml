@@ -40,6 +40,8 @@ disableKinds = ["RSS", "sitemap", "robotsTXT", "404"]
   favicon = "logo2.jpg"
   # Use Bootstrap CDN to ensure CSS loads properly
   useBootstrapCDN = true
+  # Path to static assets - make it empty to use root path
+  staticPath = ""
   animate = true
   mathjax = false
   
