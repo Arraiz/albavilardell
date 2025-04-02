@@ -26,30 +26,6 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Check theme directory and download if needed
-        run: |
-          echo "Theme directory contents:"
-          ls -la themes/
-          if [ ! -d "themes/hugo-profile" ]; then
-            echo "Theme not found, downloading..."
-            mkdir -p themes
-            git clone https://github.com/gurusabarish/hugo-profile.git themes/hugo-profile
-          fi
-          echo "Hugo profile theme directory contents:"
-          ls -la themes/hugo-profile/
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          
-      - name: Install Node.js dependencies
-        run: |
-          npm ci || npm install
-          cd themes/hugo-profile
-          npm install
-          cd ../..
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -60,28 +36,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: List Hugo version and environment
-        run: |
-          hugo version
-          hugo env
-
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo --minify --gc --themesDir=themes --baseURL "https://arraiz.github.io/albavilardell/"
-          
-      - name: List output directory
-        run: |
-          echo "Listing contents of public directory"
-          ls -la public
-          
-      - name: Check CSS files
-        run: |
-          echo "Checking CSS files"
-          find public -name "*.css" | sort
-          
+          hugo --gc --minify --baseURL "https://arraiz.github.io/albavilardell/"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
