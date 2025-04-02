@@ -20,10 +20,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: true
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -35,6 +38,11 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+
+      - name: Install Node.js dependencies
+        run: |
+          cd themes/hugo-profile
+          npm install
 
       - name: Build
         env:

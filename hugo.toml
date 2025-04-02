@@ -48,8 +48,9 @@ unsafe = true
 [params]
 title = "Alba Vilardell"
 description = "Personal website and portfolio"
+staticPath = "" # don't use /static prefix
 favicon = "logo2.jpg"
-useBootstrapCDN = true
+useBootstrapCDN = true # use Bootstrap CDN instead of local files
 animate = true
 mathjax = false
 
@@ -287,3 +288,26 @@ emailText = "Check out this site"
 article = "Jan 2, 2006"
 articleList = "Jan 2, 2006"
 articleRecent = "Jan 2, 2006"
+
+# Asset configuration
+[module]
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "themes/hugo-profile/static"
+target = "static"
+
+[security]
+enableInlineShortcodes = false
+[security.exec]
+allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM|HOME|SSH_AUTH_SOCK|USERPROFILE|DATA_DIR|TEMP_DIR)$']
+
+[security.funcs]
+getenv = ['^HUGO_']
+
+[security.http]
+methods = ['(?i)GET|POST']
+urls = ['.*']
