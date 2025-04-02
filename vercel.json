@@ -1,20 +1,29 @@
 {
+  "version": 2,
   "buildCommand": "hugo --gc --minify",
   "outputDirectory": "public",
   "framework": "hugo",
   "cleanUrls": true,
   "trailingSlash": true,
-  "routes": [
-    {
-      "src": "^/$",
-      "dest": "/index.html",
-      "headers": {
-        "Content-Type": "text/html; charset=utf-8"
-      }
+  "rewrites": [
+    { 
+      "source": "/", 
+      "destination": "/index.html" 
     },
+    { 
+      "source": "/index.xml", 
+      "destination": "/index.html" 
+    }
+  ],
+  "headers": [
     {
-      "src": "/index.xml",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
     }
   ]
 } 
