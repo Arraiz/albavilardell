@@ -7,12 +7,8 @@
   "trailingSlash": true,
   "rewrites": [
     { 
-      "source": "/", 
-      "destination": "/index.html" 
-    },
-    { 
-      "source": "/index.xml", 
-      "destination": "/index.html" 
+      "source": "/(.*).xml",
+      "destination": "/index.html"
     }
   ],
   "headers": [
@@ -24,27 +20,6 @@
           "value": "text/html; charset=utf-8"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "header",
-          "key": "Accept",
-          "value": "application/rss\\+xml"
-        }
-      ],
-      "destination": "/index.html",
-      "permanent": true,
-      "force": true
-    },
-    {
-      "source": "/index.xml",
-      "destination": "/index.html",
-      "permanent": true,
-      "force": true
     }
   ]
 } 
