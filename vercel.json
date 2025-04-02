@@ -4,10 +4,17 @@
   "framework": "hugo",
   "cleanUrls": true,
   "trailingSlash": true,
-  "redirects": [
+  "routes": [
     {
-      "source": "/index.xml",
-      "destination": "/"
+      "src": "^/$",
+      "dest": "/index.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "src": "/index.xml",
+      "dest": "/index.html"
     }
   ]
 } 

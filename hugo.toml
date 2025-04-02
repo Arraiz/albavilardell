@@ -3,9 +3,22 @@ languageCode = "en-us"
 title = "Alba Vilardell"
 theme = "hugo-profile"
 
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML"]
 page = ["HTML"]
+
+[mediaTypes]
+[mediaTypes."text/html"]
+suffixes = ["html"]
+
+[outputFormats]
+[outputFormats.HTML]
+mediaType = "text/html"
+isHTML = true
+noUgly = true
 
 enableRobotsTXT = true
 
