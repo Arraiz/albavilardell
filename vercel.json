@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "hugo --gc --minify",
+  "buildCommand": "hugo --gc --minify --ignoreCache",
   "outputDirectory": "public",
   "framework": "hugo",
   "cleanUrls": true,
