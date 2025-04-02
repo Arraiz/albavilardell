@@ -1,0 +1,13 @@
+disableKinds = ["RSS", "sitemap", "robotsTXT", "404", "taxonomy", "term"]
+
+[outputFormats]
+[outputFormats.HTML]
+mediaType = "text/html"
+isHTML = true
+noUgly = true
+permalinkable = true
+
+[outputs]
+home = ["HTML"]
+page = ["HTML"]
+section = ["HTML"] 

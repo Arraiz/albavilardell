@@ -1,0 +1,11 @@
+{
+  "name": "albavilardell-website",
+  "version": "1.0.0",
+  "description": "Alba Vilardell's personal website",
+  "scripts": {
+    "build": "hugo --gc --minify"
+  },
+  "dependencies": {
+    "@netlify/plugin-hugo": "^0.1.0"
+  }
+} 
