@@ -9,28 +9,50 @@ defaultContentLanguageInSubdir = false
 
 disableKinds = ["RSS", "sitemap", "robotsTXT", "404"]
 
-[module]
-  [[module.imports]]
-    path = "github.com/gurusabarish/hugo-profile"
-  
-  [[module.mounts]]
-  source = "static"
-  target = "static"
-
-  [[module.mounts]]
-  source = "themes/hugo-profile/static"
-  target = "static"
-
+# Standard Hugo output configuration  
 [outputs]
-home = ["HTML"]
-section = ["HTML"]
-taxonomy = ["HTML"]
-term = ["HTML"]
+  home = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
 
+# Security and execution policies
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM|HOME|SSH_AUTH_SOCK|USERPROFILE|DATA_DIR|TEMP_DIR)$']
+  
+  [security.funcs]
+    getenv = ['^HUGO_']
+  
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
+# Theme and site configuration
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  title = "Alba Vilardell"
+  description = "Personal website and portfolio"
+  favicon = "logo2.jpg"
+  # Use Bootstrap CDN to ensure CSS loads properly
+  useBootstrapCDN = true
+  animate = true
+  mathjax = false
+  
+  # Disable asset fingerprinting to avoid issues
+  [params.assets]
+    disableFingerprinting = true
+
+# Media types configuration
 [mediaTypes]
 [mediaTypes."text/html"]
 suffixes = ["html"]
 
+# Output formats configuration
 [outputFormats]
 [outputFormats.HTML]
 mediaType = "text/html"
@@ -39,10 +61,7 @@ noUgly = true
 
 enableRobotsTXT = true
 
-[markup.goldmark.renderer]
-unsafe = true
-
-# [Menus]
+# Menus configuration
 # [[Menus.main]]
 # identifier = "blog"
 # name = "Blog"
@@ -56,15 +75,6 @@ unsafe = true
 # title = "Gallery"
 # url = "/gallery"
 # weight = 2
-
-[params]
-title = "Alba Vilardell"
-description = "Personal website and portfolio"
-staticPath = "" # don't use /static prefix
-favicon = "logo2.jpg"
-useBootstrapCDN = true
-animate = true
-mathjax = false
 
 [params.theme]
 disableThemeToggle = false
@@ -300,20 +310,3 @@ emailText = "Check out this site"
 article = "Jan 2, 2006"
 articleList = "Jan 2, 2006"
 articleRecent = "Jan 2, 2006"
-
-# Asset configuration
-[security]
-enableInlineShortcodes = false
-[security.exec]
-allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
-osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM|HOME|SSH_AUTH_SOCK|USERPROFILE|DATA_DIR|TEMP_DIR)$']
-
-[security.funcs]
-getenv = ['^HUGO_']
-
-[security.http]
-methods = ['(?i)GET|POST']
-urls = ['.*']
-
-[params.assets]
-disableFingerprinting = true
