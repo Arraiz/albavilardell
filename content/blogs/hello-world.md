@@ -12,15 +12,3 @@ toc: true
 ---
 
 ## Welcome to my blog!
-
-This is my first blog post. I'll be sharing my thoughts and experiences about web development, technology, and more.
-
-## What to expect
-
-I plan to write about:
-- Web Development
-- Technology trends
-- Personal projects
-- Tips and tricks
-
-Stay tuned for more content! 
