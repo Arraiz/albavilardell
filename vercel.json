@@ -25,5 +25,26 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "Accept",
+          "value": "application/rss\\+xml"
+        }
+      ],
+      "destination": "/index.html",
+      "permanent": true,
+      "force": true
+    },
+    {
+      "source": "/index.xml",
+      "destination": "/index.html",
+      "permanent": true,
+      "force": true
+    }
   ]
 } 

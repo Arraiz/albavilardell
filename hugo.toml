@@ -6,9 +6,13 @@ theme = "hugo-profile"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+disableKinds = ["RSS", "sitemap", "robotsTXT"]
+
 [outputs]
 home = ["HTML"]
-page = ["HTML"]
+section = ["HTML"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 
 [mediaTypes]
 [mediaTypes."text/html"]
