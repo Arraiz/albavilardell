@@ -3,8 +3,9 @@ languageCode = "en-us"
 title = "Alba Vilardell"
 theme = "hugo-profile"
 
-outputs.home = ["HTML", "RSS", "JSON"]
-outputs.page = ["HTML", "RSS"]
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+page = ["HTML"]
 
 enableRobotsTXT = true
 
