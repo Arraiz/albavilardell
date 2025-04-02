@@ -1,13 +1,13 @@
-baseURL = "https://albavilardell.me/"
+baseURL = "https://arraiz.github.io/albavilardell/"
 languageCode = "en-us"
 title = "Alba Vilardell"
 theme = "hugo-profile"
 
-# Force rebuild - v1
+# Trigger deployment v1
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
-disableKinds = ["RSS", "sitemap", "robotsTXT"]
+disableKinds = ["RSS", "sitemap", "robotsTXT", "404"]
 
 [outputs]
 home = ["HTML"]
@@ -48,8 +48,8 @@ unsafe = true
 [params]
 title = "Alba Vilardell"
 description = "Personal website and portfolio"
-favicon = "/logo2.jpg"
-useBootstrapCDN = false
+favicon = "logo2.jpg"
+useBootstrapCDN = true
 animate = true
 mathjax = false
 
@@ -86,13 +86,13 @@ intro = "Hello, my name is"
 title = "Alba"
 subtitle = "Vilardell Santiago"
 content = "Heritage, tourism and culture"
-image = "/images/Alba7.jpg"
+image = "images/Alba7.jpg"
 bottomImage.enable = true
 
 [params.hero.button]
 enable = true
 name = "Resume"
-url = "/resume/Alba_Vilardell_CV.pdf"
+url = "resume/Alba_Vilardell_CV.pdf"
 download = true
 newPage = true
 
@@ -110,7 +110,7 @@ url = ""
 [params.about]
 enable = true
 title = "About me"
-image = "/images/foto4.PNG"
+image = "images/foto4.PNG"
 content = """A self-motivated, dedicated professional with 3+ years of experience in tourism services.
  Adept at providing professional service and building customer relationships through responsiveness and appreciation.
  
