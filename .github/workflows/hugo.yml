@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: false
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -40,6 +40,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          npm ci || npm install
           cd themes/hugo-profile
           npm install
           cd ../..
@@ -53,9 +54,6 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo mod get
-          hugo mod npm pack
-          npm install
           hugo --minify --gc --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact

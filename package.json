@@ -1,8 +1,14 @@
 {
   "name": "albavilardell-website",
   "version": "1.0.0",
+  "description": "Alba Vilardell's personal website",
   "private": true,
   "scripts": {
-    "build": "echo 'No build needed'"
+    "build": "hugo --gc --minify",
+    "dev": "hugo server",
+    "clean": "rm -rf public resources"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 } 
