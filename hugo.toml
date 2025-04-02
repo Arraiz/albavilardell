@@ -1,0 +1,270 @@
+baseURL = "https://albavilardell.me/"
+languageCode = "en-us"
+title = "Alba Vilardell"
+theme = "hugo-profile"
+
+outputs.home = ["HTML", "RSS", "JSON"]
+outputs.page = ["HTML", "RSS"]
+
+enableRobotsTXT = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+# [Menus]
+# [[Menus.main]]
+# identifier = "blog"
+# name = "Blog"
+# title = "Blog posts"
+# url = "/blogs"
+# weight = 1
+
+# [[Menus.main]]
+# identifier = "gallery"
+# name = "Gallery"
+# title = "Gallery"
+# url = "/gallery"
+# weight = 2
+
+[params]
+title = "Alba Vilardell"
+description = "Personal website and portfolio"
+favicon = "/logo2.jpg"
+useBootstrapCDN = false
+animate = true
+mathjax = false
+
+[params.theme]
+disableThemeToggle = false
+defaultTheme = "light"
+
+[params.font]
+fontSize = "1rem"
+fontWeight = 400
+lineHeight = 1.5
+textAlign = "left"
+
+[params.navbar]
+align = "ms-auto"
+brandName = "Alba Vilardell"
+disableSearch = false
+
+[params.navbar.stickyNavBar]
+enable = true
+showOnScrollUp = true
+
+[params.navbar.menus]
+disableAbout = false
+disableExperience = false
+disableEducation = false
+disableProjects = false
+disableAchievements = false
+disableContact = false
+
+[params.hero]
+enable = true
+intro = "Hello, my name is"
+title = "Alba"
+subtitle = "Vilardell Santiago"
+content = "Heritage, tourism and culture"
+image = "/images/Alba7.jpg"
+bottomImage.enable = true
+
+[params.hero.button]
+enable = true
+name = "Resume"
+url = "/resume/Alba_Vilardell_CV.pdf"
+download = true
+newPage = true
+
+[params.hero.socialLinks]
+[[params.hero.socialLinks.fontAwesomeIcons]]
+icon = "fab fa-github"
+url = ""
+[[params.hero.socialLinks.fontAwesomeIcons]]
+icon = "fab fa-linkedin"
+url = "https:linkedin.com/in/alba-vilardell-santiago"
+[[params.hero.socialLinks.fontAwesomeIcons]]
+icon = "fab fa-twitter"
+url = ""
+
+[params.about]
+enable = true
+title = "About me"
+image = "/images/foto4.PNG"
+content = """A self-motivated, dedicated professional with 3+ years of experience in tourism services.
+ Adept at providing professional service and building customer relationships through responsiveness and appreciation.
+ 
+ My friendly approach and strong communication skills enable me to build rapport with guests, staff,
+ and guides thereby improving efficiency and boasting business.
+"""
+
+[params.about.skills]
+enable = true
+title = " Soft Skills"
+items = ["Problem solving", "Complaint resolution","Interpersonal skills", "Outstanding communication", "Ability to handle stressful situations", "Positive attitude", "Patience", "Willingness to improve", 
+"Organization", "Time management", "Attention to detail", "Adaptability"]
+
+
+## EXPERIENCE
+
+[params.experience]
+enable = true
+
+[[params.experience.items]]
+job = "Team Leader"
+company = "Optimacultura"
+companyUrl = "https://optimacultura.com/"
+date = "Sept 2019 - present"
+featuredLink = { enable = true, name = "Catedral de Bilbao", url = "https://catedralbilbao.com/" }
+info = {enable = true, content="I'm currently working as a team leader in the Cathedral of Bilbao."}
+content = """My duties in this position are:
+- Implement tourism marketing strategies to attract visitors and promote local heritage.
+- Manage and oversee the day-to-day operations
+- Foster relationships with hotels, restaurants and local businesses to enhance the overall tourist experience
+- Train and supervise staff members to provide excellent customer service and maintain high-quality standards
+- Dealing with customer queries and issues on a regular basis answering the phone an mails
+
+"""
+
+[[params.experience.items]]
+job = "Tour guide"
+company = "Deusto Expo Center"
+companyUrl = "https://www.instagram.com/explore/locations/671530006680769/deusto-expo-center/" 
+date = " May - Sept 2019"
+featuredLink = { enable = true, name = "Ramsés, rey de reyes", url = "https://museumspedia.net/es/i/25707-ramses-king-of-kings/" }
+info = { enable = true, content = "I worked as a guide in Ramses, King of Kings exhibition." }
+content = """
+The exhibition were scale copies of Egyptian temples and tombs created by Hany Mustafa.
+- Provide informative and engaging tours of gruops of 30 people 
+- Narrated historical and cultural information about Egypt
+- Ensure enjoyment and participation of the visitors 
+- Enforce rules of safety and accommodations for disabled people
+- Check and teach archaeological information
+"""
+
+[[params.experience.items]]
+job = "Archaeologist"
+company = "Dig Ventures and Deputación de Pontevedra"
+companyUrl = "https://digventures.com/projects/costa-dos-castros/"
+date = "June 2015 - September 2016"
+info = { enable = true, content = "I was part of the archaeological team in the project"}
+featuredLink = { enable = true, name = "Costa dos Castros", url = "https://www.facebook.com/costadoscastros/?locale=es_ES" }
+content = """ The project was not only the archaeological site, but also anthropological with the participation and of the local comunity and people from other countries. 
+During the project I was in charge of different tasks and duties such as:
+- Participation in the archaeological excavations,carrying out documentation, excavation and analysis of the remains.
+- Coordination with multidisciplinary teams to ensure the heritage.
+- Elaboration of turistic and cultural visits through the differents sites of the project.
+- Supervision, help and teach volunteers that participated in the work. 
+"""
+## EXPERIENCE END
+
+
+
+[params.education]
+enable = true
+index = false
+
+[[params.education.items]]
+title = "Bachelor's degree in Archaeology "
+school = { name = "University of Barcelona, Barcelona", url = "http://www.ub.edu/grauarqueo/index.php/cat/" }
+date = "2012 - 2017"
+content = """
+Internship
+Iberian Village of Puig Castellar, Santa Coloma de Gramanet, Barcelona. , https://museu.gramenet.cat/el-museu-al-territori/poblat-iberic-puig-castellar/arqueologia-del-poblat-iberic/
+
+19th century workshop of Antoni Tarrés, Barcelona, https://web.ub.edu/en/web/actualitat/w/arqueub
+"""
+
+[[params.education.items]]
+title = "Certificado Profesional en Información y Atención al Visitante"
+school = { name = "Lanbide – Servicio Vasco de Empleo", url = "https://web.lanbide.eus/apps/CE_DETALLE_CERTIFICADO?LG=C&ML=OFEMEN21&MS=Oa&IDCE=HOTI0108&IDUS=" }
+date = "2018"
+
+content = """
+Internship in Museo de la minería del País Vasco, https://meatzaldea.eus/"
+"""
+
+[[params.education.items]]
+title = "Certificado en Lengua de Signos Española (Nivel B1)"
+school = { name = "Lanbide – Servicio Vasco de Empleo", url = "https://web.lanbide.eus/apps/CE_DETALLE_ESPECIALIDAD?LG=C&ML=&MS=baa&IDCE=FCOE0059" }
+date = "2019"
+
+[[params.education.items]]
+title = "Certificado Profesional en Marketing en el punto de venta"
+school = { name = "Lanbide – Servicio Vasco de Empleo", url = "https://web.lanbide.eus/apps/CE_DETALLE_ESPECIALIDAD?LG=c&ML=estmen2&MS=&IDCE=COMT05" }
+date = "2024"
+
+[params.projects]
+enable = false
+
+[params.achievements]
+enable = true
+
+[[params.achievements.items]]
+title = "Mentored a team of 5 Customer Support"
+content = "I solved all problems with optimal solution."
+
+[[params.achievements.items]]
+title = "Exceeded sales targets by 200% in 2023 "
+content = "I designed a marketing campaign through local museums and organizations  ."
+url = ""
+
+
+[[params.achievements.items]]
+title = "Ponencia Les runes del Somni"
+content = "Participación en el seminario Elias Rogent i Barcelona: arquitectura, patrimoni i restauració"
+url = "https://investigacion.unir.net/investigadores/1041023/colaboracion/investigador/4669636?lang=es"
+
+
+[[params.achievements.items]]
+title = "Las Fronteras del paisaje de la locura"
+content = "Imago civitatis: Hospitales y manicomios en Occidente."
+url = "https://investigacion.unir.net/investigadores/1041023/colaboracion/investigador/4669636?lang=es"
+
+
+[[params.achievements.items]]
+title = "Visitas teatralizadas Hospital Mental de la Santa Creu"
+content = "Realización de visitas guiadas durante las fiestas de Nou Barris"
+url = "https://beteve.cat/general/visites-teatralitzades-seu-districte-nou-barris/"
+
+
+[params.contact]
+enable = true
+title = "Get in Touch"
+content = "My inbox is always open at avilardell93@gmail.com. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
+btnName = "Mail me"
+btnLink = "mailto:avilardell93@gmail.com"
+
+[params.footer]
+[params.footer.recentPosts]
+path = "blogs"
+count = 3
+title = "Recent Posts"
+enable = false
+disableFeaturedImage = false
+
+[params.footer.socialNetworks]
+linkedin = "https:linkedin.com/in/alba-vilardell-santiago"
+tumblr = "https://avilarsa.tumblr.com/"
+instagram = "https://www.instagram.com/albavsantiago/?hl=es"
+
+
+[params.listPages]
+disableFeaturedImage = false
+
+[params.singlePages]
+readTime = { enable = true, content = "min read" }
+scrollprogress = { enable = true }
+
+[params.terms]
+read = "Read"
+toc = "Table Of Contents"
+copyright = "All rights reserved"
+pageNotFound = "Page not found"
+emailText = "Check out this site"
+
+[params.datesFormat]
+article = "Jan 2, 2006"
+articleList = "Jan 2, 2006"
+articleRecent = "Jan 2, 2006"
