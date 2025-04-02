@@ -9,6 +9,10 @@ defaultContentLanguageInSubdir = false
 
 disableKinds = ["RSS", "sitemap", "robotsTXT", "404"]
 
+[module]
+  [[module.imports]]
+    path = "github.com/gurusabarish/hugo-profile"
+
 [outputs]
 home = ["HTML"]
 section = ["HTML"]
@@ -50,7 +54,7 @@ title = "Alba Vilardell"
 description = "Personal website and portfolio"
 staticPath = "" # don't use /static prefix
 favicon = "logo2.jpg"
-useBootstrapCDN = true # use Bootstrap CDN instead of local files
+useBootstrapCDN = false
 animate = true
 mathjax = false
 
@@ -311,3 +315,6 @@ getenv = ['^HUGO_']
 [security.http]
 methods = ['(?i)GET|POST']
 urls = ['.*']
+
+[params.assets]
+disableFingerprinting = true
